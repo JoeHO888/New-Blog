@@ -69,7 +69,7 @@ const Blog = ({ posts, meta }) => (
                     title={post.frontmatter.title}
                     description={post.frontmatter.description}
                     category={post.frontmatter.category}
-                    featuredImage={post.frontmatter.featuredImage.childImageSharp.fluid.src}
+                    imageLink={post.frontmatter.featuredImage.childImageSharp.fluid.src}
                 />
             ))}
         </Layout>

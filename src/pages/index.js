@@ -169,7 +169,7 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                         title={project.frontmatter.title}
                         description={project.frontmatter.description}
                         category={project.frontmatter.category}
-                        featuredImage={project.frontmatter.featuredImage.childImageSharp.fluid.src}
+                        imageLink={project.frontmatter.featuredImage.childImageSharp.fluid.src}
                     />
                 ))}
                 <Action to={"/projects/"}>
@@ -189,7 +189,7 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                         title={post.frontmatter.title}
                         description={post.frontmatter.description}
                         category={post.frontmatter.category}
-                        featuredImage={post.frontmatter.featuredImage.childImageSharp.fluid.src}
+                        imageLink={post.frontmatter.featuredImage.childImageSharp.fluid.src}
                     />
                 ))}
                 <Action to={"/blog/"}>

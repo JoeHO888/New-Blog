@@ -70,7 +70,7 @@ const Work = ({ projects, meta }) => (
                         title={project.frontmatter.title}
                         description={project.frontmatter.description}
                         category={project.frontmatter.category}
-                        featuredImage={project.frontmatter.featuredImage.childImageSharp.fluid.src}
+                        imageLink={project.frontmatter.featuredImage.childImageSharp.fluid.src}
                     />
                 ))}
             </>

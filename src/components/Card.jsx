@@ -170,7 +170,7 @@ const Date = styled("div")`
     margin: 0;
 `
 
-const Card = ({ date, slug, title, description, featuredImage }) => (
+const Card = ({ date, slug, title, description, imageLink }) => (
     <CardContainer to={`${slug}`}>
         <CardContent className="CardContent">
             <CardTitle>
@@ -189,7 +189,7 @@ const Card = ({ date, slug, title, description, featuredImage }) => (
             </Metas>
         </CardContent>
         <CardImageContainer className="CardImageContainer">
-            <img src={featuredImage} alt={title} />
+            <img src={imageLink} alt={title} />
         </CardImageContainer>
         
     </CardContainer>
@@ -202,5 +202,5 @@ Card.propTypes = {
     slug: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    featuredImage: PropTypes.string.isRequired,
+    imageLink: PropTypes.string.isRequired,
 }
