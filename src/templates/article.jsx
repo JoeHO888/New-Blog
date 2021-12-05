@@ -74,6 +74,10 @@ const Article = ({ article }) => {
                         content: `${article.frontmatter.title} | Joe Ho Blog`,
                     },
                     {
+                        property: `og:image`,
+                        content: article.frontmatter.featuredImage.childImageSharp.fluid.src,
+                    },
+                    {
                         property: `og:description`,
                         content: article.frontmatter.description,
                     },
@@ -83,15 +87,27 @@ const Article = ({ article }) => {
                     },
                     {
                         name: `twitter:card`,
-                        content: `summary`,
+                        content: `summary_large_image`,
                     },
+/*                     {
+                        name: `twitter:creator`,
+                        content: meta.author,
+                    }, */
                     {
                         name: `twitter:title`,
-                        content: article.frontmatter.title,
+                        content: `${article.frontmatter.title} | Joe Ho Blog`,
                     },
                     {
                         name: `twitter:description`,
                         content: article.frontmatter.description,
+                    },
+/*                     {
+                        name: `twitter:creator`,
+                        content: meta.twitterAccount
+                    }, */
+                    {
+                        name: `twitter:image`,
+                        content: article.frontmatter.featuredImage.childImageSharp.fluid.src,
                     },
                 ]}
             />

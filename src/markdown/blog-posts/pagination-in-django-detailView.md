@@ -38,4 +38,4 @@ class BlogDetailView(generic.DetailView,MultipleObjectMixin):
 ```
 
 Result:
-![Tux, the Linux mascot](../../images/pagination-in-django-detailView/result.jpg)
+![Pagination in Django detailView Result](../../images/pagination-in-django-detailView/result.jpg)
