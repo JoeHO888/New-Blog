@@ -40,10 +40,6 @@ const Work = ({ projects, meta }) => (
                     content: `summary_large_image`,
                 },
                 {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
                     name: `twitter:title`,
                     content: meta.title,
                 },

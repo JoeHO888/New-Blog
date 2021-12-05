@@ -75,7 +75,7 @@ const Article = ({ article }) => {
                     },
                     {
                         property: `og:image`,
-                        content: article.frontmatter.featuredImage.childImageSharp.fluid.src,
+                        content: `${article.frontmatter.featuredImage.childImageSharp.fluid.src}`,
                     },
                     {
                         property: `og:description`,
@@ -89,10 +89,10 @@ const Article = ({ article }) => {
                         name: `twitter:card`,
                         content: `summary_large_image`,
                     },
-/*                     {
+                    {
                         name: `twitter:creator`,
-                        content: meta.author,
-                    }, */
+                        content: "@JoeHo31326982",
+                    },
                     {
                         name: `twitter:title`,
                         content: `${article.frontmatter.title} | Joe Ho Blog`,
@@ -101,13 +101,9 @@ const Article = ({ article }) => {
                         name: `twitter:description`,
                         content: article.frontmatter.description,
                     },
-/*                     {
-                        name: `twitter:creator`,
-                        content: meta.twitterAccount
-                    }, */
                     {
                         name: `twitter:image`,
-                        content: article.frontmatter.featuredImage.childImageSharp.fluid.src,
+                        content: `${article.frontmatter.featuredImage.childImageSharp.fluid.src}`,
                     },
                 ]}
             />
