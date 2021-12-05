@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Moment from 'react-moment';
@@ -7,8 +7,8 @@ import styled from "@emotion/styled";
 import colors from "styles/colors";
 import Layout from "components/Layout";
 import Img from "gatsby-image"
+/* import Prism from "prismjs" */
 import 'styles/style.scss';
-
 
 const ArticleHeroContainer = styled("div")`
     max-height: 500px;
@@ -60,6 +60,10 @@ const ArticleDate = styled("div")`
 `
 
 const Article = ({ article }) => {
+/*     useEffect(() => {
+        // call the highlightAll() function to style our code blocks
+        Prism.highlightAll()
+    }) */
     return (
         <>
             <Helmet

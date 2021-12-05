@@ -169,7 +169,7 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                         title={project.frontmatter.title}
                         description={project.frontmatter.description}
                         category={project.frontmatter.category}
-/*                         featuredImage={project.frontmatter.featuredImage} */
+                        featuredImage={project.frontmatter.featuredImage.childImageSharp.fluid.src}
                     />
                 ))}
                 <Action to={"/projects/"}>
@@ -189,7 +189,7 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                         title={post.frontmatter.title}
                         description={post.frontmatter.description}
                         category={post.frontmatter.category}
-/*                         featuredImage={post.frontmatter.featuredImage} */
+                        featuredImage={post.frontmatter.featuredImage.childImageSharp.fluid.src}
                     />
                 ))}
                 <Action to={"/blog/"}>
@@ -270,6 +270,13 @@ export const query = graphql`
         slug
         title
         description
+        featuredImage {
+                    childImageSharp {
+                        fluid(maxWidth: 800) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
       }
     }
   }
@@ -282,6 +289,13 @@ export const query = graphql`
         slug
         title
         description
+        featuredImage {
+                    childImageSharp {
+                        fluid(maxWidth: 800) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
       }
     }
   }
