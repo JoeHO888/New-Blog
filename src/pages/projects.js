@@ -70,7 +70,7 @@ const Work = ({ projects, meta }) => (
                         title={project.frontmatter.title}
                         description={project.frontmatter.description}
                         category={project.frontmatter.category}
-/*                         featuredImage={project.frontmatter.featuredImage} */
+                        featuredImage={project.frontmatter.featuredImage.childImageSharp.fluid.src}
                     />
                 ))}
             </>
@@ -105,6 +105,13 @@ export const query = graphql`
         slug
         title
         description
+        featuredImage {
+                    childImageSharp {
+                        fluid(maxWidth: 800) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
       }
     }
   }

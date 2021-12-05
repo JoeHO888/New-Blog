@@ -13,3 +13,8 @@ html {
 pre {
     overflow-x: auto;
   }
+
+  span + em { 
+      text-align: center;
+      display: block;
+  }

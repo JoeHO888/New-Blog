@@ -69,7 +69,7 @@ const Blog = ({ posts, meta }) => (
                     title={post.frontmatter.title}
                     description={post.frontmatter.description}
                     category={post.frontmatter.category}
-/*                     featuredImage={post.frontmatter.featuredImage} */
+                    featuredImage={post.frontmatter.featuredImage.childImageSharp.fluid.src}
                 />
             ))}
         </Layout>
@@ -104,6 +104,13 @@ export const query = graphql`
         slug
         title
         description
+        featuredImage {
+                    childImageSharp {
+                        fluid(maxWidth: 800) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
       }
     }
   }

@@ -2,7 +2,7 @@
 date: "2019-05-13"
 slug: "/blog-post/technical-terms-in-chinese-and-english/"
 title: "Technical Terms in Chinese and English"
-description: "Translation of technical terms between Chinese and English"
+description: "Translate technical terms between Chinese and English"
 featuredImage: "../../images/pagination-in-django-detailView/result.jpg"
 ---
 Because of job nature, I need to discuss with Chinese Engineers who oftern use some technical words in Chinese, so I decide to write a list of common words which help me (and you hopefully)during the email communication.

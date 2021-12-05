@@ -11,7 +11,7 @@ Django provides two elgant views, ListView and DetailView to display a list of s
 
 We need to first get a list of related objects which we want to pagainate and show in DetailView and then pass in as a parameter, object_list, so that our template can access the object_list variable.
 
-View:
+**View**:
 ```python
 class BlogDetailView(generic.DetailView,MultipleObjectMixin):
     model = Blog
@@ -24,7 +24,7 @@ class BlogDetailView(generic.DetailView,MultipleObjectMixin):
         return context
 ```
 
-Template:
+**Template**:
 ```python
 class BlogDetailView(generic.DetailView,MultipleObjectMixin):
     model = Blog
@@ -37,5 +37,5 @@ class BlogDetailView(generic.DetailView,MultipleObjectMixin):
         return context
 ```
 
-Result:
+**Result**:
 ![Pagination in Django detailView Result](../../images/pagination-in-django-detailView/result.jpg)
