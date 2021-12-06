@@ -3,7 +3,7 @@ date: "2021-07-15"
 slug: "/blog-post/least-permissive-role-to-manage-mfa-in-azure-ad/"
 title: "Least Permissive Role To Manage MFA In Azure AD"
 description: "Least Permissive Role To Manage MFA In Azure AD"
-featuredImage: result.jpg
+featuredImage: least-permissive-role-to-manage-mfa-in-azure-ad.jpg
 ---
 ## Background
 With MFA (Multi-Factor Authentication) enabled by default in Azure AD (Active Directory) , there are always some situations we need to disable/re-enable MFA for some users. These tasks are easy and repetitive, but we hesitate to let helpdesk to handle it or automate it, as MFA management used to require Global Administrator, the greatest privilege in Azure AD.
@@ -105,8 +105,6 @@ Connect-MsolService
 $user = <<User UPN>>
 Get-MsolUser -UserPrincipalName $user | Set-MsolUser -StrongAuthenticationRequirements @()
 ```
-
-{% include figure.html image="/images/2021-07-15-Least-Permissive-Role-To-Manage-MFA-In-Azure-AD/succeed-in-disabling-user-mfa.png" alt="MFA disabled for general user" caption="MFA disabled for general user"%}
 
 ![MFA disabled for general user](../../images/least-permissive-role-to-manage-mfa-in-azure-ad/succeed-in-disabling-user-mfa.png)
 *MFA disabled for general user*

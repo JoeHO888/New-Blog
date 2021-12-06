@@ -18,3 +18,15 @@ span + em {
       text-align: center;
       display: block;
 }
+
+img[src*=".gif"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.gif-text{
+    text-align: center;
+    display: block;
+}

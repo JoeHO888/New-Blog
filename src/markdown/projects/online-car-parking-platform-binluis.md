@@ -3,7 +3,7 @@ date: "2019-05-02"
 slug: "/projects/online-car-parking-platform-binluis/"
 title: "Online Car Parking Platform - BinLuIS"
 description: "Online Car Parking Platform - BinLuIS"
-featuredImage: result.jpg
+featuredImage: online-car-parking-platform-binluis.png
 ---
 ## Background
 In today's digital era, more and more traditional industries are undergoing digital transformation, specifically becoming in O2O(Online to Offline) model. With Internet, enterprises can promote and attract billions of customers, then sell their products to customers offline. 

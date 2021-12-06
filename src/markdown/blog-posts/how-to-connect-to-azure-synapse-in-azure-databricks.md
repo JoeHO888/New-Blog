@@ -3,7 +3,7 @@ date: "2021-01-02"
 slug: "/blog-post/how-to-connect-to-azure-synapse-in-azure-databricks/"
 title: "How to connect to Azure Synapse in Azure Databricks"
 description: "Connect to Azure Synapse in Azure Databricks"
-featuredImage: result.jpg
+featuredImage: how-to-connect-to-azure-synapse-in-azure-databricks.png
 ---
 ## Background
 With Azure Databricks, we can easily transform huge size of data in parallel and store the transformed data in different Azure services, one of them is Azure Synapse (formerly SQL DW). Azure Databricks has built-in connector which lets us read and write data easily from Azure Synapse.

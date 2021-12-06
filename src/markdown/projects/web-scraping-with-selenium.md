@@ -3,7 +3,7 @@ date: "2021-10-02"
 slug: "/projects/web-scraping-with-selenium/"
 title: "Web Scraping With Selenium"
 description: "Simple example to scrape NBA player’s salary"
-featuredImage: result.jpg
+featuredImage: web-scraping-with-selenium.png
 ---
 ## Introduction
 Web scraping refers to extracting the content of a website programmatically. Specifically, developers create bots to get the HTML code of a website, parse the code and export the result to an external data source.
@@ -76,17 +76,24 @@ You should get the HTML code as below.
 	</body>
 </html>
 ```
-On the other hand, you should see a new browser is launched. 
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/browser-launche-by-selenium.png" alt="Browser launched by Selenium" caption="Browser launched by Selenium"%}
+On the other hand, you should see a new browser is launched.
+![Browser launched by Selenium](../../images/web-scraping-with-selenium/browser-launche-by-selenium.png)
+*Browser launched by Selenium*
 
 ### Navigate to NBA player's basic information page
 In order to get each player's basic information, we need to navigate to the corresponding page & extract the data. The links of these pages are already in a table of the main page.
 ![NBA players basic information link](../../images/web-scraping-with-selenium/nba-players-basic-informaion-link.png)
 *NBA players basic information link*
 To get the links in this table, we can find the corresponding HTML elements. We can use the below method to find the HTML element of those links of NBA players' basic information page.
-1. Right click one of the links. {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/right-click-a-nba-player-basic-information-link.png" alt="Right Click a NBA player's basic information link" caption="Right Click a NBA player's basic information link"%}
-2. Select "Inspect". {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/inspect-a-nba-player-basic-information-link-html-element.png" alt="Inspect a NBA player basic information link HTML element" caption="Inspect a NBA player basic information link HTML element"%}
-3. Developer tool should appear & the corresponding HTML element should be highlighted. {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-player-link-html-element.png" alt="NBA player link HTML element" caption="NBA player link HTML element"%}
+1. Right click one of the links.
+    ![Right Click a NBA player's basic information link](../../images/web-scraping-with-selenium/right-click-a-nba-player-basic-information-link.png)
+    *Right Click a NBA player's basic information link*
+2. Select "Inspect".
+    ![Inspect a NBA player basic information link HTML element](../../images/web-scraping-with-selenium/inspect-a-nba-player-basic-information-link-html-element.png)
+    *Inspect a NBA player basic information link HTML element*
+3. Developer tool should appear & the corresponding HTML element should be highlighted.
+    ![NBA player link HTML element](../../images/web-scraping-with-selenium/nba-player-link-html-element.png)
+    *NBA player link HTML element*
 4. HTML elements for other players are similar to this one.
 
 Next, we use Beautiful Soup to extract the links of basic information page for all players.

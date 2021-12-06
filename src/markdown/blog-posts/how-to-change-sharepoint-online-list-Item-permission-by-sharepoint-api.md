@@ -3,7 +3,7 @@ date: "2020-06-10"
 slug: "/blog-post/how-to-change-sharepoint-online-list-Item-permission-by-sharepoint-api/"
 title: "How to change SharePoint Online List Item Permission by SharePoint API"
 description: "Change SharePoint Online list item permission by SharePoint API"
-featuredImage: result.jpg
+featuredImage: how-to-change-sharepoint-online-list-Item-permission-by-sharepoint-api.png
 ---
 ## Background
 In SharePoint Online, we sometimes need to restrict/edit permission for each list item, which is trivial in GUI, but it invovles a few extra steps if you want to do it programmatically.

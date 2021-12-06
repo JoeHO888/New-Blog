@@ -11,7 +11,7 @@ import Img from "gatsby-image"
 import 'styles/style.scss';
 
 const ArticleHeroContainer = styled("div")`
-    max-height: 500px;
+/*     max-height: 500px; */
     overflow: hidden;
     display: flex;
     flex-direction: column;

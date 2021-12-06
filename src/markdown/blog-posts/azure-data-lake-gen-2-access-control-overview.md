@@ -1,9 +1,9 @@
 ---
-date: "2021-01-02"
+date: "2021-01-30"
 slug: "/blog-post/azure-data-lake-gen-2-access-control-overview/"
 title: "Azure Data Lake Gen 2 Access Control Overview"
 description: "Access Control in Azure Data Lake Gen 2"
-featuredImage: result.jpg
+featuredImage: azure-data-lake-gen-2-access-control-overview.png
 ---
 ## Background
 Azure Data Lake Gen 2 offers fine-grained access control on your data, it allows you to customize permission, defines permission settings per container, folder or file be because of its hierarchical namespace.
@@ -45,7 +45,10 @@ Select connection type as "connect to public blob container" in Azure Storage Ex
 *Select connection type as 'connect to public blob container' in Azure Storage Explorer*
 
 
-Type your container URL, your URL should be in this format: https://<<your_storage-account_name>>.blob.core.windows.net/<<your_container_name>>
+Type your container URL, your URL should be in this format:
+```
+https://<<your_storage-account_name>>.blob.core.windows.net/<<your_container_name>>
+```
 ![Type your public container URL in Azure Storage Explorer](../../images/azure-data-lake-gen-2-access-control-overview/input-public-blob-container-url.png)
 *Type your public container URL in Azure Storage Explorer*
 

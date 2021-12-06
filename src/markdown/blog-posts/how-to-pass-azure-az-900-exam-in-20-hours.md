@@ -3,7 +3,7 @@ date: "2019-12-17"
 slug: "/blog-post/how-to-pass-azure-az-900-exam-in-20-hours/"
 title: "How to pass Azure AZ-900 exam in 20 hours"
 description: "Utimate guide to pass Azure AZ-900 exam, including materials, suggested preparations"
-featuredImage: result.jpg
+featuredImage: how-to-pass-azure-az-900-exam-in-20-hours.png
 ---
 ## Background
 Microsoft's Azure is one of the major cloud computing service, it is the second largest Public Cloud Service with about [19% of market share](https://www.statista.com/chart/18819/worldwide-market-share-of-leading-cloud-infrastructure-service-providers/ "Market Share"). Considering the growth in public cloud service, learning Azure definitely brings you more career opportunities and growth, you may earn [15% higher salary](https://www.microsoft.com/en-us/learning/certification-benefits.aspx "Salary") as reported by Microsoft if you are certificated. Microsoft offers lots of Azure related certifications for different kind of roles, e.g. Developers, IT Administrators and Data Scientists. 
@@ -42,7 +42,7 @@ Before the exam, I used some of the below materials and resources for preparatio
 1. Microsoft Learn - Azure Fundamentals ([https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/](https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/))
 2. Azure Sandbox (You can try some Azure Services without creating a subscription)
 3. Azure Subscription (e.g. Azure Free Account with valid credit card provided, Azure Student Account)
-4. Azure Exercises ([https://www.examtopics.com/exams/microsoft/az-900/view/1](https://www.examtopics.com/exams/microsoft/az-900/view/1))
+4. [Azure Exercises](https://www.examtopics.com/exams/microsoft/az-900/view/1)
 5. A series of Youtube videos on questions types ([https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH](https://www.youtube.com/playlist?list=PLahhVEj9XNTdZrAYjA7mq4bH1X5cTykpH))
 6. Azure Practice Exam at [Linux Academy](https://linuxacademy.com/course/microsoft-azure-fundamentals-az-900-exam-prep/) (7 days free trial) (I didn't try this, but it's free, why not have a try?)
 

@@ -126,8 +126,8 @@ const CardImageContainer = styled("div")`
     padding-right: 2em;
 
     @media(max-width:${dimensions.maxwidthTablet}px) {
-        padding-top: 3em;
-        max-height: 200px;
+/*         padding-top: 3em; */
+        max-height: 300px;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;

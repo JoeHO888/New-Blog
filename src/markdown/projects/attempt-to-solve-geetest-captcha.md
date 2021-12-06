@@ -3,7 +3,7 @@ date: "2020-01-05"
 slug: "/projects/attempt-to-solve-geetest-captcha/"
 title: "Attempt To Solve Geetest CAPTCHA"
 description: "Attempt To Solve Geetest CAPTCHA"
-featuredImage: result.jpg
+featuredImage: attempt-to-solve-geetest-captcha.png
 ---
 ## What is Geetest CAPTCHA?
 In today's digital era, about 40% of network traffic is driven by bot. Usually, we only want human access our applications. For example, we want to prevent Ticket Bots for popular concerts. That's why CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) comes into play, we use it to distinguish Human from bots and thus blocks the bots
@@ -25,8 +25,12 @@ There are some icons in the CAPTCHA. They may look like what the CAPTCHA asks yo
 
 Here's a Geetest CAPTCHA I am able to crack with image processing and automation technology. In this following sections, I will share how I try to crack the CAPTCHA.
 
+
 ![Successful Case for cracking CAPTCHA](../../images/attempt-to-solve-geetest-captcha/successful_cracking.gif)
-*Successful Case for cracking CAPTCHA*
+<em class='gif-text' >
+Successful Case for cracking CAPTCHA
+</em>
+
 
 Remark: [English CAPTCHA](https://www.geetest.com/en) was available previously, but it is unavailable now. However, [chinese version](https://www.geetest.com/show) of this kind of CAPTCHA is still available, so I will use chinese CAPTCHA in below demonstration section.
 
@@ -98,8 +102,8 @@ Blurring make each pixel being affected by its  surrounding pixels. In this case
 In terms of mathematics, blurring is to convolve a kernel with an image, which is the same technique used in Convolutional neural network (a kind of state of art in Deep Learning/Artificial Intelligence). You may refer to below materials for more information.
 
 References:
-1. [https://en.wikipedia.org/wiki/Gaussian_blur](https://en.wikipedia.org/wiki/Gaussian_blur)
-2. [https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
+1. [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur)
+2. [OpenCV Python Filtering](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
 
 ### 3. Locate where the icons are in the main pane
 
@@ -165,7 +169,9 @@ action.perform()
 ```
 
 ![Solve the CAPTCHA](../../images/attempt-to-solve-geetest-captcha/complete-demo-CAPTCHA.gif)
-*Solve the CAPTCHA*
+<em class='gif-text' >
+Solve the CAPTCHA
+</em>
 
 ## Result
 Geetest CAPTCHA is quite hard, my bot can only solve 5% of them.
