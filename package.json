@@ -19,6 +19,7 @@
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-remark-copy-linked-files": "^2.1.5",
     "gatsby-remark-images": "^3.0.16",
     "gatsby-remark-prismjs": "^3.2.3",
     "gatsby-source-filesystem": "^2.1.26",
