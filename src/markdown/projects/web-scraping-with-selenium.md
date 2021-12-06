@@ -18,10 +18,11 @@ Here's the main page of NBA players' basic information: [https://hoopshype.com/s
 
 We can navigate to another web page that contains each player's basic information from this page.
 
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-information-overview.png" alt="NBA Players Information Overview" caption="NBA Players Information Overview"%}
+![NBA Players Information Overview](../../images/web-scraping-with-selenium/nba-players-information-overview.png)
+*NBA Players Information Overview*
 
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/stephen-curry-basic-information.png" alt="Stephen Curry's basic information" caption="Stephen Curry's basic information"%}
-
+![Stephen Curry's basic information](../../images/web-scraping-with-selenium/stephen-curry-basic-information.png)
+*Stephen Curry's basic information*
 
 ### Prerequisite
 Basic Python & HTML knowledge is required.
@@ -39,13 +40,17 @@ To let Selenium module functions, we need to install Selenium driver. The driver
 We will illustrate the installation steps for Windows,  you may refer to [https://selenium-python.readthedocs.io/installation.html#drivers](https://selenium-python.readthedocs.io/installation.html#drivers) for more detail.
 
 Download the zip file containing the chromedriver.exe
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/selenium-driver-zip-file.png" alt="Selenium Drive zip file" caption="Selenium Drive zip file"%}
+![Selenium Drive zip file](../../images/web-scraping-with-selenium/selenium-driver-zip-file.png)
+*Selenium Drive zip file*
 Unzip the folder. Optionally, you can move the folder to another directory
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/selenium-driver-exe.png" alt="Selenium Drive Executable file" caption="Selenium Drive Executable file"%}
+![Selenium Driver Executable file](../../images/web-scraping-with-selenium/selenium-driver-exe.png)
+*Selenium Driver Executable file*
 Type "Environment Variables" in start menu & select "Edit the system environment variables"
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/search-environment-variables.png" alt="Search Environment Variables" caption="Search Environment Variables"%}
+![Search Environment Variables](../../images/web-scraping-with-selenium/search-environment-variables.png)
+*Search Environment Variables*
 Update "PATH" variable to include the folder path which contains the driver program
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/update-path-environment-variable.png" alt="Update 'Path' Environment Variable" caption="Update 'Path' Environment Variable"%}
+![Update 'Path' Environment Variable](../../images/web-scraping-with-selenium/update-path-environment-variable.png)
+*Update 'Path' Environment Variable*
 
 ### Get HTML code of the website
 First of all, let us try to use Selenium to launch a new browser & get the source code of NBA players' salary data source.
@@ -76,7 +81,8 @@ On the other hand, you should see a new browser is launched.
 
 ### Navigate to NBA player's basic information page
 In order to get each player's basic information, we need to navigate to the corresponding page & extract the data. The links of these pages are already in a table of the main page.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-basic-informaion-link.png" alt="NBA players basic information link" caption="NBA players basic information link"%}
+![NBA players basic information link](../../images/web-scraping-with-selenium/nba-players-basic-informaion-link.png)
+*NBA players basic information link*
 To get the links in this table, we can find the corresponding HTML elements. We can use the below method to find the HTML element of those links of NBA players' basic information page.
 1. Right click one of the links. {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/right-click-a-nba-player-basic-information-link.png" alt="Right Click a NBA player's basic information link" caption="Right Click a NBA player's basic information link"%}
 2. Select "Inspect". {% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/inspect-a-nba-player-basic-information-link-html-element.png" alt="Inspect a NBA player basic information link HTML element" caption="Inspect a NBA player basic information link HTML element"%}
@@ -103,11 +109,13 @@ players_basic_information_links  = [
 ]
 ```
 There are numerous ways to query the HTML code with BeautifulSoup. Here, we locate the salary table by "table tag" & its classes, then extract all links inside it.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/extract-links-inside-table.png" alt="Extract links inside table" caption="Extract links inside table"%}
+![Extract links inside table](../../images/web-scraping-with-selenium/extract-links-inside-table.png)
+*Extract links inside table*
 
 ### Extract basic information
 After getting the link to each player's basic information page, we will extract the basic information for each user. Most of those pieces of information are text and non-clickable, we need to locate its element by highlighting them and right clicking as below.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/inspect-stephen-curry-basic-information.png" alt="'Inspect' Stephen Curry Basic Information" caption="'Inspect' Stephen Curry Basic Information"%}
+!['Inspect' Stephen Curry Basic Information](../../images/web-scraping-with-selenium/inspect-stephen-curry-basic-information.png)
+*'Inspect' Stephen Curry Basic Information*
 
 Once again, you can use BeautifulSoup to extract the elements of those pieces of information by performing certain queries.
 ```python
@@ -229,7 +237,10 @@ df = pd.DataFrame(all_players_info,
 print(df)
 ```
 You should see a table as below.
-{% include figure.html image="/images/2021-11-27-Web-Scraping-with-selenium/nba-players-information-pandas-table.png" alt="NBA players Information Pandas Table" caption="NBA players Information Pandas Table"%}
+
+![NBA players Information Pandas Table](../../images/web-scraping-with-selenium/nba-players-information-pandas-table.png)
+*NBA players Information Pandas Table*
+
 Finally, we export the information as a csv file
 ``` python
 import pandas as pd
