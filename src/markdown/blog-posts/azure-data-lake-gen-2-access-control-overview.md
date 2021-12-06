@@ -3,7 +3,7 @@ date: "2021-01-02"
 slug: "/blog-post/azure-data-lake-gen-2-access-control-overview/"
 title: "Azure Data Lake Gen 2 Access Control Overview"
 description: "Access Control in Azure Data Lake Gen 2"
-featuredImage: "../../images/pagination-in-django-detailview/result.jpg"
+featuredImage: result.jpg
 ---
 ## Background
 Azure Data Lake Gen 2 offers fine-grained access control on your data, it allows you to customize permission, defines permission settings per container, folder or file be because of its hierarchical namespace.

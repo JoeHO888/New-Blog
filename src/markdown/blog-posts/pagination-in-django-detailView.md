@@ -3,7 +3,7 @@ date: "2019-05-11"
 slug: "/blog-post/pagination-in-django-detailview/"
 title: "Pagination in Django detailView"
 description: "Implement pagination in Django DetailView"
-featuredImage: "../../images/pagination-in-django-detailview/result.jpg"
+featuredImage: result.jpg
 ---
 I was learning how to create a mini blog in Django from [a series of great tutorials](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django), it discuss the fundamental building blocks of Web Developement in Django.s
 
