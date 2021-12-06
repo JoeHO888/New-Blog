@@ -23,28 +23,36 @@ You can use 4 different ways to control permissions, they are
 Only authorized users can access files in this container.
 
 Private Container Example
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/private-container-example.png" alt="Private Container Example" %}
+![Private Container Example](../../images/azure-data-lake-gen-2-access-control-overview/private-container-example.png)
+*Private Container Example*
 
 ### Blob Level Public Access
 External users can access any file insider the container given he/she has the corresponding file URL.
 
 Blob URL
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/blob-url.png" alt="Blob URL" %}
+![Blob URL](../../images/azure-data-lake-gen-2-access-control-overview/blob-url.png)
+*Blob URL*
 
 You can download the file with the URL directly
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/download-blob-from-url.png" alt="Download blob from URL" %}
+![Download blob from URL](../../images/azure-data-lake-gen-2-access-control-overview/download-blob-from-url.png)
+*Download blob from URL*
 
 ### Container Level Public Access
 In contrast to Blob Level Public Access, external users need to know the blob URL before downloading the file, Container Level Public Access allows external users enumerate all files inside that container. You can do this by browsing the container URL in [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
 
 Select connection type as "connect to public blob container" in Azure Storage Explorer
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/select-public-blob-container-connection-type.png" alt="Select connection type as 'connect to public blob container' in Azure Storage Explorer" %}
+![Select connection type as 'connect to public blob container' in Azure Storage Explorer](../../images/azure-data-lake-gen-2-access-control-overview/select-public-blob-container-connection-type.png)
+*Select connection type as 'connect to public blob container' in Azure Storage Explorer*
+
 
 Type your container URL, your URL should be in this format: https://<<your_storage-account_name>>.blob.core.windows.net/<<your_container_name>>
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/input-public-blob-container-url.png" alt="Type your public container URL in Azure Storage Explorer" %}
+![Type your public container URL in Azure Storage Explorer](../../images/azure-data-lake-gen-2-access-control-overview/input-public-blob-container-url.png)
+*Type your public container URL in Azure Storage Explorer*
 
 You should be able to view your public container
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/view-public-container.png" alt="View Public Container in Azure Storage Explorer" %}
+![View Public Container in Azure Storage Explorer](../../images/azure-data-lake-gen-2-access-control-overview/view-public-container.png)
+*View Public Container in Azure Storage Explorer*
+
 
 ### Configure Public Access
 First, you need to enable/disable public read access for your storage account. Enable it if you want to have Blob/Container Level Public Access for some containers, disable it if you want all containers private.
@@ -52,10 +60,13 @@ First, you need to enable/disable public read access for your storage account. E
 Remark: This setting applies to all containers inside this storage account.
 
 Enable/Disable Blob Public Access
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/configure-blob-public-access.png" alt="Configure Blob Public Access" %}
+You should be able to view your public container
+![Configure Blob Public Access](../../images/azure-data-lake-gen-2-access-control-overview/configure-blob-public-access.png)
+*Configure Blob Public Access*
 
 Configure level of public access for a container
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/configure-container-public-access-level.png" alt="Configure Public Access Level" %}
+![Configure Public Access Level](../../images/azure-data-lake-gen-2-access-control-overview/configure-container-public-access-level.png)
+*Configure Public Access Level*
 
 ## Authorization Mechanisms
 Assuming your container is set as “Private”, you can use 4 different ways to control permissions, they are
@@ -68,7 +79,8 @@ Assuming your container is set as “Private”, you can use 4 different ways to
 Shared Key Authorization allows authorized users gain full access on all resources in your Azure Data Lake. Azure Data Lake offers two shared keys, typically we usually use only one of them (primary key). When this primary key is comprised, we can switch the primary key with another one and regenerate the primary key.
 
 Two Shared Keys
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/shared-key-authorization.png" alt="Shared Key Authorization" %}
+![Shared Key Authorization](../../images/azure-data-lake-gen-2-access-control-overview/shared-key-authorization.png)
+*Shared Key Authorization*
 
 ### Shared Access Signature (SAS) Authorization
 Shared Access Signature (SAS) Authorization allows you generate a SAS token which others can use to authorize themselves, you can define the permission (e.g. read, write) and the token expiry date (i.e. others cannot use this token after the token expires). It is 
@@ -76,7 +88,8 @@ very convenient if you want to grant external users access to the file.
 
 SAS token has two major limitations. First, you cannot revoke the token once it is generated, so you should set this token’s lifespan short enough, otherwise a long-lasting token will risk the integrity of your files. Second, SAS token applies to file only, you cannot set SAS token for a directory. Even you create a SAS tokens for each file, these SAS tokens are different. Therefore, it may be troublesome if you use SAS token to share many files to others. 
 
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/shared-access-signature-authorization.png" alt="Shared Access Signature Authorization" %}
+![Shared Access Signature Authorization](../../images/azure-data-lake-gen-2-access-control-overview/shared-access-signature-authorization.png)
+*Shared Access Signature Authorization*
 
 ### Role-based Access Control (Azure RBAC)
 Role-based access control allows you leverage Azure built-in role to assign permissions on ALL data within Azure Data Lake Gen 2. 
@@ -87,7 +100,8 @@ One of them allows user to “manage” the storage account, e.g. reading the Sh
 
 Another type allows user to access the data in Azure Data Lake. Examples are “Storage Blob Data Owner”, “Storage Blob Data Contributor”, “Storage Blob Data Reader”.
 
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/azure-role-based-access-control-example.png" alt="Azure Role Based Access Control Example" %}
+![Azure Role Based Access Control Example](../../images/azure-data-lake-gen-2-access-control-overview/azure-role-based-access-control-example.png)
+*Azure Role Based Access Control Example*
 
 ### Access Control Lists (ACL)
 Access Control Lists is the only authorization mechanism which allows you set permission per container, directory and files, you can set “Read”, “Write” and “Execute” on these objects.
@@ -95,7 +109,9 @@ Access Control Lists is the only authorization mechanism which allows you set pe
 There are two types of ACL, Access ACL and Default ACL, the former one determines the access control for that specific object, i.e. directory/files, the latter only applies to directories, it determines the default permission for child objects created in that directory. We will share more detail in next section.
 
 Access ACL and Default ACL
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/access-acl-and-default-acl.png" alt="Access ACL and Default ACL" %}
+
+![Access ACL and Default ACL](../../images/azure-data-lake-gen-2-access-control-overview/access-acl-and-default-acl.png)
+*Access ACL and Default ACL*
 
 ## Container, Folder and Files Level Permission Settings
 In [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/), you can set permission per container, folder and files via ACL. There two types of permissions, Access ACL and Default ACL, you may refer to ACL section for reference.
@@ -104,40 +120,51 @@ In [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-e
 To allow others see the files in your storage account, you need to grant them “Reader” permission to the storage account and assign them “read” and “execute” permission to the container where the files are stored.
 
 Add them as "Reader" in Azure Portal
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/assign-users-reader-role.png" alt="Assign users 'Reader' permission" %}
+![Assign users 'Reader' permission](../../images/azure-data-lake-gen-2-access-control-overview/assign-users-reader-role.png)
+*Assign users 'Reader' permission*
 
 Right Click the container which you would like to set ACL
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/access-container-access-control-lists.png" alt="Access Container Access Control Lists" %}
+![Access Container Access Control Lists](../../images/azure-data-lake-gen-2-access-control-overview/access-container-access-control-lists.png)
+*Access Container Access Control Lists*
 
 Assign user "read" and "execute" permission to the container
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/assign-users-read-and-execute-permission-for-container.png" alt="Assign Users 'Read' and 'Execute' permission for container" %}
+![Assign Users 'Read' and 'Execute' permission for container](../../images/azure-data-lake-gen-2-access-control-overview/assign-users-read-and-execute-permission-for-container.png)
+*Assign Users 'Read' and 'Execute' permission for container*
 
 ### Container Permission Settings
 Right Click the container which you would like to set ACL
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/access-container-access-control-lists.png" alt="Access Container Access Control Lists" %}
+![Access Container Access Control Lists](../../images/azure-data-lake-gen-2-access-control-overview/access-container-access-control-lists.png)
+*Access Container Access Control Lists*
 
 Set "Access ACL" and "Default ACL"
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/configure-container-access-control-lists.png" alt="Configure Access Control Lists For Container" %}
+![Configure Access Control Lists For Container](../../images/azure-data-lake-gen-2-access-control-overview/configure-container-access-control-lists.png)
+*Configure Access Control Lists For Container*
 
 ### Folder Permission Settings
 Choose the folder you want to set permission and click "Manage ACLs"
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/access-folder-access-control-lists.png" alt="Access Folder Access Control Lists" %}
+![Access Folder Access Control Lists](../../images/azure-data-lake-gen-2-access-control-overview/access-folder-access-control-lists.png)
+*Access Folder Access Control Lists*
 
 Set "Access ACL" for that folder and "Default ACL" for child items of that folder
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/configure-folder-access-control-lists.png" alt="Configure Access Control Lists For Folder" %}
+![Configure Access Control Lists For Folder](../../images/azure-data-lake-gen-2-access-control-overview/configure-folder-access-control-lists.png)
+*Configure Access Control Lists For Folder*
 
 Check default permission of a file inside that folder
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/check-default-permission-of-file-in-folder.png" alt="Check default permission of a file inside folder have default ACL configured" %}
+![Check default permission of a file inside folder have default ACL configured](../../images/azure-data-lake-gen-2-access-control-overview/check-default-permission-of-file-in-folder.png)
+*Check default permission of a file inside folder have default ACL configured*
 
 Check default permission of a sub folder inside that folder
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/check-default-permission-of-sub-folder-in-folder.png" alt="Check default permission of a sub folder inside folder have default ACL configured" %}
+![Check default permission of a sub folder inside folder have default ACL configured](../../images/azure-data-lake-gen-2-access-control-overview/check-default-permission-of-sub-folder-in-folder.png)
+*Check default permission of a sub folder inside folder have default ACL configured*
 
 ### File Permission Settings
 Choose the file you want to set permission and click "Manage ACLs"
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/access-file-access-control-lists.png" alt="Access File Access Control Lists" %}
+![Access File Access Control Lists](../../images/azure-data-lake-gen-2-access-control-overview/access-file-access-control-lists.png)
+*Access File Access Control Lists*
 
 Set "Access ACL" for that file
-{% include figure.html image="/images/2021-01-30-Azure-Data-Lake-Gen-2-Access-Control-Overview/configure-file-access-control-lists.png" alt="Configure 'Access ACL' of a file" %}
+![Configure 'Access ACL' of a file](../../images/azure-data-lake-gen-2-access-control-overview/configure-file-access-control-lists.png)
+*Configure 'Access ACL' of a file*
 
 Blog: [https://joeho.xyz](https://joeho.xyz)
 

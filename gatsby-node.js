@@ -41,19 +41,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const articleTemplate = require.resolve('./src/templates/article.jsx');
 
-/*     projectsList.forEach(node => {
-        // The uid you assigned in Prismic is the slug!
-        createPage({
-            type: 'Project',
-            path: `${node.slug}`,
-            component: articleTemplate,
-            context: {
-                // Pass the unique ID (uid) through context so the template can filter by it
-                uid: node.id,
-            },
-        })
-    }) */
-
     postsList.forEach(post => {
         // The uid you assigned in Prismic is the slug!
         createPage({
@@ -66,4 +53,17 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
+
+    projectsList.forEach(project => {
+      // The uid you assigned in Prismic is the slug!
+      createPage({
+          type: 'Project',
+          path: `${project.frontmatter.slug}`,
+          component: articleTemplate,
+          context: {
+              // Pass the unique ID (uid) through context so the template can filter by it
+              id: project.id,
+          },
+      })
+  })
 }

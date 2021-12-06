@@ -150,12 +150,13 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                     do interesting <a target="_blank" href="/projects/" style={{ color: "#4947bb", textDecoration: "none" }}>projects</a>.
                 </h1>
             </div>
-            <a
-                target="_blank" rel="noopener noreferrer">
+            <>
                 <Button>
-                    <a href="#about-me" style={{ color: "#ffffff", textDecoration: "none" }}>Get In touch</a>
+                    <a href="#about-me" style={{ color: "#ffffff", textDecoration: "none" }}>More</a>
                 </Button>
-            </a>
+            </>
+
+
         </Hero>
 
         <Section>
@@ -206,7 +207,6 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                 <h2>
                     Background
                 </h2>
-
                 <p>
                     I'm an infrastructure specialist, I primarily work on modern workspace and cyber security.
                 </p>
@@ -227,6 +227,10 @@ const RenderBody = ({ highlightPosts, highlightProjects, meta }) => (
                     <li><a href="http://paymentcatch.com/">Payment Catch</a>, a software to let merchants collect online recurring payment</li>
                     <li><a href="https://apps.shopify.com/blulish-insights">Blulish Reports</a>, Shopify Analytics Tool On Sales, Products and Orders</li>
                 </ol>
+                <h2>
+                    Contact
+                </h2>
+                <p>Email: <a href="mailto:joe.hochotai@gmail.com">joe.hochotai@gmail.com</a></p>
             </>
         </Section>
 

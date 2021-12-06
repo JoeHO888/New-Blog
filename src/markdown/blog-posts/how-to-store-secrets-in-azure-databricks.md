@@ -22,7 +22,7 @@ Open Cloud Shell & make sure you select “Bash” for the Cloud Shell Environme
 #### Set up Virtual Environment
 Create Virtual Environment with below command.
 
-```
+```bash
 # Bash
 virtualenv -p /usr/bin/python2.7 databrickscli
 ```
@@ -33,7 +33,7 @@ virtualenv -p /usr/bin/python2.7 databrickscli
 
 Activate your virtual environment with below command.
 
-```
+```bash
 # Bash
 source databrickscli/bin/activate
 ```
@@ -44,7 +44,7 @@ source databrickscli/bin/activate
 #### Install Databricks CLI
 Install Databricks CLI with below command.
 
-```
+```bash
 # Bash
 pip install databricks-cli
 ```
@@ -86,7 +86,7 @@ If your databricks is in Standard plan, you can only create secret scope which w
 ![Check databricks plan](../../images/how-to-store-secrets-in-azure-databricks/check-databricks-plan.jpg)
 *Check databricks plan*
 
-```
+```bash
 # Bash
 databricks secrets create-scope --scope <<scope>>
 
@@ -100,7 +100,7 @@ databricks secrets create-scope --scope storage # Premium plan
 
 #### Create Secret
 You can use below command to create secret under the specified scope.
-```
+```bash
 # Bash
 databricks secrets put --scope <<scope>> --key <<key name>>
 
