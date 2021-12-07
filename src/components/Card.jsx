@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import Moment from 'react-moment';
 import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
 import colors from "styles/colors";
@@ -184,14 +183,14 @@ const Card = ({ date, slug, title, description, imageLink }) => (
             </CardAction>
             <Metas>
                 <Date>
-                    <Moment format="MMMM D, YYYY">{date}</Moment>
+                    {date}
                 </Date>
             </Metas>
         </CardContent>
         <CardImageContainer className="CardImageContainer">
             <img src={imageLink} alt={title} />
         </CardImageContainer>
-        
+
     </CardContainer>
 )
 
