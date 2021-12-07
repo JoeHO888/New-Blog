@@ -1,6 +1,6 @@
 ---
 date: "2019-05-13"
-slug: "/blog-post/technical-terms-in-chinese-and-english/"
+slug: "/blog-posts/technical-terms-in-chinese-and-english/"
 title: "Technical Terms in Chinese and English"
 description: "Translate technical terms between Chinese and English"
 featuredImage: technical-terms-in-chinese-and-english.jpg

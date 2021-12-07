@@ -1,6 +1,6 @@
 ---
 date: "2019-05-11"
-slug: "/blog-post/pagination-in-django-detailview/"
+slug: "/blog-posts/pagination-in-django-detailview/"
 title: "Pagination in Django detailView"
 description: "Implement pagination in Django DetailView"
 featuredImage: pagination-in-django-detailView.jpg

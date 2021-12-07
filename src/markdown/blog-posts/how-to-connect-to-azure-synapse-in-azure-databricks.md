@@ -1,6 +1,6 @@
 ---
 date: "2021-01-02"
-slug: "/blog-post/how-to-connect-to-azure-synapse-in-azure-databricks/"
+slug: "/blog-posts/how-to-connect-to-azure-synapse-in-azure-databricks/"
 title: "How to connect to Azure Synapse in Azure Databricks"
 description: "Connect to Azure Synapse in Azure Databricks"
 featuredImage: how-to-connect-to-azure-synapse-in-azure-databricks.png

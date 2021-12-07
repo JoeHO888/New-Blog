@@ -1,6 +1,6 @@
 ---
 date: "2020-12-19"
-slug: "/blog-post/how-to-store-secrets-in-azure-databricks/"
+slug: "/blog-posts/how-to-store-secrets-in-azure-databricks/"
 title: "How to store secrets in Azure Databricks"
 description: "Secret Management in Azure Databricks"
 featuredImage: how-to-store-secrets-in-azure-databricks.png

@@ -1,6 +1,6 @@
 ---
 date: "2020-02-27"
-slug: "/blog-post/primary-key-design-in-aws-dynamodb/"
+slug: "/blog-posts/primary-key-design-in-aws-dynamodb/"
 title: "Primary Key Design In AWS DynamoDB"
 description: "How does AWS DynamoDB store data by primary key"
 featuredImage: primary-key-design-in-aws-dynamodb.png

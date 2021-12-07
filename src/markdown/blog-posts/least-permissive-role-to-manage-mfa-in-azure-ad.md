@@ -1,6 +1,6 @@
 ---
 date: "2021-07-15"
-slug: "/blog-post/least-permissive-role-to-manage-mfa-in-azure-ad/"
+slug: "/blog-posts/least-permissive-role-to-manage-mfa-in-azure-ad/"
 title: "Least Permissive Role To Manage MFA In Azure AD"
 description: "Least Permissive Role To Manage MFA In Azure AD"
 featuredImage: least-permissive-role-to-manage-mfa-in-azure-ad.jpg

@@ -1,6 +1,6 @@
 ---
 date: "2021-01-30"
-slug: "/blog-post/azure-data-lake-gen-2-access-control-overview/"
+slug: "/blog-posts/azure-data-lake-gen-2-access-control-overview/"
 title: "Azure Data Lake Gen 2 Access Control Overview"
 description: "Access Control in Azure Data Lake Gen 2"
 featuredImage: azure-data-lake-gen-2-access-control-overview.png
