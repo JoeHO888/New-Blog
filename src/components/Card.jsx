@@ -81,10 +81,10 @@ const CardContent = styled("div")`
     }
 `
 
-const CardCategory = styled("h6")`
+/* const CardCategory = styled("h6")`
     font-weight: 600;
     color: ${colors.grey600};
-`
+` */
 
 const CardTitle = styled("h3")`
     margin-bottom: 0.5em;
