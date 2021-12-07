@@ -11,7 +11,6 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
